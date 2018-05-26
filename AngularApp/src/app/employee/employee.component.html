@@ -1,0 +1,49 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center" class="panel panel-default">
+  <h2>
+    Citius Employees are here
+  </h2>
+  <table border="2" align="center">
+    <tr>
+      <td>First NAME</td>
+      <td>Photo</td>
+    </tr>
+    <tr>
+      <td>{{empl.name}}</td>
+      <td><img [src]="empl.photo" /></td>
+    </tr>
+  </table>
+  <table border="2" align="center">
+    <tr>
+      <td>
+    ENTER NAME : <input type="text" [(ngModel)] = "name" />
+      </td>
+      <td>
+        NEW NAME IS : {{name}}
+     </td>
+    </tr>
+    <tr>
+      <td>
+    SELECT COUNTRY : <select [(ngModel)]="selectedCountry">
+      <!-- <option  value="IND">IND</option>
+      <option  value="USA">USA</option> 
+      <option  value="SA">SA</option>  -->
+      <option *ngFor="let c of country" >{{c}}</option> 
+    </select>
+      </td>
+      <td>
+        YOU ARE FROM : {{selectedCountry}} 
+     </td>
+     
+    </tr>
+    <tr>
+      <td colspan="2">
+        <ul>
+          <li *ngFor="let c of country" >{{c}}</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
